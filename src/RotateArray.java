@@ -6,19 +6,29 @@ public class RotateArray {
 
     }
 
-     static void rotate(int[] nums,int k ){
-        for(int i =0;i<nums.length;i++){
-            swap(nums,nums[i],nums[nums.length-1]);
+     public static void rotate(int[] nums,int k ){
+        k=k%nums.length;
+
+        int n =nums.length;
+
+        swap(nums,0,n-1);
+        swap(nums,0,k-1);
+        swap(nums,k,n-1);
+
+        for(int i =0;i<n;i++){
+            System.out.print(nums[i]);
         }
 
-        for(int i =0;i<nums.length;i++){
-            System.out.println(nums[i]);
-        }
-    }
 
-    static void swap(int[] arr,int a,int b){
-        int temp = arr[a];
-        arr[a]=arr[b];
-        arr[b]=temp;
-    }
+     }
+
+     public static void swap(int[] nums,int start, int end){
+        while(start<end){
+            int temp = nums[start];
+            nums[start]=nums[end];
+            nums[end]=temp;
+            start++;
+            end--;
+        }
+     }
 }
