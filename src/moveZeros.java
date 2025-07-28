@@ -15,7 +15,7 @@ public class moveZeros {
             if(nums[i]!=0){
                 nums[index]=nums[i];
                 index++;
-                
+
             }
         }
         for(int i =index;i<nums.length;i++){
