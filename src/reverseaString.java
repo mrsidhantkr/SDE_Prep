@@ -3,9 +3,7 @@ import java.util.Arrays;
 public class reverseaString {
     public static void main(String[] args) {
 
-        String s ="ABC";
-        reverse(s);
-
+       funcc(0);
 
 
     }
@@ -23,5 +21,18 @@ public class reverseaString {
 
         System.out.println(Arrays.toString(arr));
 
+    }
+
+
+
+    static void funcc(int c){
+      //  int counter=0;
+        System.out.println(c);
+        if(c>=3){
+            System.out.println("Done!");
+            return;
+        }
+
+        funcc(c+1);
     }
 }
